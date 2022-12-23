@@ -29,5 +29,6 @@ resource "aws_security_group" "default_sg" {
 
 ## AWS EC2 Instance 
 resource "aws_instance" "experimental_instance" {
-    
+    ami = "ami-07c2ae35d31367b3e"
+    instance_type = "t3.nano"
 }
