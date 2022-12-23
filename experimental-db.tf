@@ -9,18 +9,26 @@ terraform {
 
 provider "aws" {
   region = "eu-west-2"
-  
+
   assume_role {
     
   }
 }
 
-resource "aws_db_instance" "db_for_schema_learning" {
-  db_name = "experimental_db"
-  engine = "mysql"
-  engine_version = "8.0"
-  username = "mydb"
-  password = "admin"
-  allocated_storage = 10
+# Defining the Security Group for the instance
+resource "aws_security_group" "default_sg" {
+  name = "main-sg"
+  description = "The main security group for the resources."
 
+  tags = {
+    Name = "Main_sg"
+  }
+}
+
+
+
+## AWS EC2 Instance 
+resource "aws_instance" "experimental_instance" {
+    ami = "ami-07c2ae35d31367b3e"
+    instance_type = "t3.nano"
 }
