@@ -11,3 +11,4 @@ create aws infrastructure according to terraform:
       entrypoint: [""]
     script:
       - terraform -version
+      - terraform validate
