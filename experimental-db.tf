@@ -9,10 +9,6 @@ terraform {
 
 provider "aws" {
   region = "eu-west-2"
-
-  assume_role {
-    
-  }
 }
 
 # Defining the Security Group for the instance
@@ -24,7 +20,6 @@ resource "aws_security_group" "default_sg" {
     Name = "Main_sg"
   }
 }
-
 
 
 ## AWS EC2 Instance 
