@@ -14,4 +14,4 @@ create aws infrastructure according to terraform:
       - terraform init
       - terraform validate
       - terraform plan
-      - terraform apply
+      - terraform apply -input=false
