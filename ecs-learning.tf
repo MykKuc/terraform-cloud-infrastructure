@@ -15,7 +15,7 @@ provider "aws" {
 
 resource "aws_ecr_repository" "employee_man_app_ecr_repository" {
   name = "employee-management-app"
-  image_tag_mutability = "FALSE"
+  image_tag_mutability = "MUTABLE"
 
   image_scanning_configuration {
     scan_on_push = "false"
